@@ -1,4 +1,4 @@
-﻿/*=============================================
+/*=============================================
 -----------------------------------
 Copyright (c) 2016 Lachlan Burndred
 -----------------------------------
@@ -44,71 +44,6 @@ function GameObject()
         width: 32,
         height: 32,
         color: "blue",
-        position: new Vector2(),
-        rotation: 0,
-        Update: function ()
-        {
-
-        }
+        position: new Vector2()
     }
 }
-
-
-// Main update function
-function Update()
-{
-    console.log(Player.width);
-}
-
-$(canvas).keydown(function (event)
-{
-    if (event.keyCode == KeyCode.w)
-    {
-        up = true;
-    }
-
-    if (event.keyCode == KeyCode.s)
-    {
-        down = true;
-    }
-
-    if (event.keyCode == KeyCode.a)
-    {
-        left = true;
-    }
-
-    if (event.keyCode == KeyCode.d)
-    {
-        right = true;
-    }
-}); // Keydown movement start
-
-$(canvas).keyup(function (event)
-{
-    if (event.keyCode == KeyCode.w)
-    {
-        up = false;
-    }
-
-    if (event.keyCode == KeyCode.s)
-    {
-        down = false;
-    }
-
-    if (event.keyCode == KeyCode.a)
-    {
-        left = false;
-    }
-
-    if (event.keyCode == KeyCode.d)
-    {
-        right = false;
-    }
-}); // Keyup movement stop
-
-// Sets to run update every frame @ 60fps
-setInterval(function ()
-{
-    Time.Update();
-    Update();
-}, 1000 / FPS);
